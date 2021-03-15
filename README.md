@@ -1,7 +1,7 @@
 # Getting started
 TLDR need to clone with a unique project name and rename database
 
-1. git clone git@github.com:Derek229/starter-project-spring-21.git <new_project_name>
+1. git clone git@github.com:Derek229/Main-starter-project.git <new_project_name>
 
 2. cd  into <new_project_name>
 
