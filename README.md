@@ -7,7 +7,7 @@ TLDR need to clone with a unique project name and rename database
 
 3. run bundle 
 
-4. rename database to something unique may use <new_project_name> in `database.yml` - search fro `starter-spring-21` in `database.yml`  inside of vs code.
+4. rename database to something unique may use <new_project_name> in `database.yml` - search fro `starter-project` in `database.yml`  inside of vs code use `command f` to find 
 
 5. rails db:create
 6. cd client
@@ -18,10 +18,7 @@ TLDR need to clone with a unique project name and rename database
 2. yarn start
 
 ## Handle GITHUB  need a new repo
- two way to do this 
-
-1. remove remote add new one (easiest , preferred)
+ 1. remove remote add new one 
     - `git remote rm origin`
     -create a new github repo
     - git remote add origin <ssh link to repo>
-2. remove git repo entirely and recreate a new repo
