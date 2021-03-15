@@ -7,7 +7,7 @@ TLDR need to clone with a unique project name and rename database
 
 3. run bundle 
 
-4. rename database to something unique may use <new_project_name> in `database.yml` - search fro `starter-spring-21` in `database.yml` 
+4. rename database to something unique may use <new_project_name> in `database.yml` - search fro `starter-spring-21` in `database.yml`  inside of vs code.
 
 5. rails db:create
 6. cd client
