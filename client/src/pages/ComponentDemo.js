@@ -25,12 +25,12 @@ const ComponentDemo = ()=>{
             <RegisterForm />
          </CardContainer>
           <CardContainer>
-              <h1>yo</h1>
-              <p>asdhjfka dkfj alksdj flkaj sdlfkj a lk df</p>
-              <p>asdhjfka dkfj alksdj flkaj sdlfkj a lk df</p>
+              <h1>Hello world</h1>
+              <p>saint patty's day</p>
+              <p></p>
           </CardContainer>
           <CardContainer>
-              <h1>yo</h1>
+              <h1>hello world</h1>
               <p>asdhjfka dkfj alksdj flkaj sdlfkj a lk df</p>
               <p>asdhjfka dkfj alksdj flkaj sdlfkj a lk df</p>
           </CardContainer>
