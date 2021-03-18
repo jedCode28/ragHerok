@@ -38,7 +38,7 @@ function RegisterForm() {
         ref={register({
           required: true,
           validate: (val) =>
-            val.map((word) => word.length >= 8)
+          val.split(" ").filter((word) => word.length >= 3).length >= 4
         })}
       />
 

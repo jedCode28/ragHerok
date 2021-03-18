@@ -1,16 +1,33 @@
 import React from 'react'
 import Button from '../components/Button'
-import CardContainer from '../components/CardContainer'
+import Card from '../components/Card'
 import FormattedMessage from '../components/FormattedMessage'
+import HookDemo from '../components/HookDemo'
+// import HookDemo1 from '../components/HookDemo1'
+// import HookDemo2 from '../components/HookDemo2'
+// import HookDemo3 from '../components/HookDemo3'
+import LoadDataDemo from '../components/LoadDataDemo'
 import RegisterForm from '../components/RegisterForm'
 
 const ComponentDemo = ()=>{
     return(
         <>
           <h1>My components</h1>
-          <Button primary>Primary button</Button>
-          <Button >Inverted Button</Button>
-          <CardContainer>
+          <Card header='Loading Data Demo'>
+          {/* <h1>HookDemo3</h1>
+              <HookDemo3 />
+              <h1>HookDemo2</h1>
+              <HookDemo2 /> */}
+              <h1>HookDemo</h1>
+              <HookDemo />
+              
+          </Card>
+
+          <Card header='Buttons'>
+            <Button primary>Primary button</Button>
+            <Button >Inverted Button</Button>
+          </Card>
+          <Card header='Formatted Messages'>
               <FormattedMessage type='alert'>
                   Alert message
               </FormattedMessage>
@@ -20,20 +37,11 @@ const ComponentDemo = ()=>{
               <FormattedMessage>
                   Notify message
               </FormattedMessage>
-          </CardContainer>
-          <CardContainer>
+          </Card>
+          <Card header='Form Demo'>
             <RegisterForm />
-         </CardContainer>
-          <CardContainer>
-              <h1>Hello world</h1>
-              <p>saint patty's day</p>
-              <p></p>
-          </CardContainer>
-          <CardContainer>
-              <h1>hello world</h1>
-              <p>asdhjfka dkfj alksdj flkaj sdlfkj a lk df</p>
-              <p>asdhjfka dkfj alksdj flkaj sdlfkj a lk df</p>
-          </CardContainer>
+         </Card>
+
 
 
          </>

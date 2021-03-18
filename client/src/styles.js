@@ -7,7 +7,7 @@ export const INV_PRIMARY_COLOR = 'white';
 export const PADDING = '.25em 1em';
 export const MARGIN = '1em';
 export const SHADOW = '2px 2px 7px 1px #ddd'
-
+export const MEDIUM_SPACING = '.5em';
 
 export const ALERT_BACKGROUND = 'pink';
 export const ALERT_TEXT_COLOR = 'red';
