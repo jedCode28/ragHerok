@@ -18,8 +18,7 @@ const Home = () => {
   }
   return (
     <div>
-      <h1>Title goes here </h1>
-      {testData}
+    <header as='h1' textAlign='center'>Login in/ register</header>
     </div>
   )
 }
