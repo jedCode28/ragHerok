@@ -1,6 +1,6 @@
 import React, {useState, useEffect } from 'react'
 import axios from 'axios'
-import { List, Header, Table, Card, CardHeader, Accordion } from 'semantic-ui-react';
+import { List, Header, Table, Card, CardHeader, Accordion, Label } from 'semantic-ui-react';
 
 const Dogs = () => {
   const [dogs, setDogs] = useState([])
@@ -8,6 +8,8 @@ const Dogs = () => {
 
   const handleClick = (e, titleProps) => {
     const { index } = titleProps
+    activeIndex === index?
+    setActiveIndex( null ):
     setActiveIndex( index )
   }
 
@@ -47,7 +49,6 @@ const Dogs = () => {
           <Card.Content>
             <Card.Header>{dog.dog_name}</Card.Header>
             <Card.Meta>Price: {dog.price} </Card.Meta>
-            <Card.Meta>Seller: {dog.name} </Card.Meta>
             <Card.Description>{dog.description}</Card.Description>
           </Card.Content>
         </Card>
@@ -67,10 +68,18 @@ const Dogs = () => {
             index={i}
             onClick={handleClick}
             >
-            {seller} 
+
+            <div>
+                <Label>
+                  {seller}
+                </Label>
+              </div>
+
             </Accordion.Title>
             <Accordion.Content active={activeIndex === i}>
+              <Card.Group>
               {renderDogs((dogs.filter(dog => dog.name == seller)))}
+              </Card.Group>
             </Accordion.Content>
           </Accordion>
         )
