@@ -7,9 +7,9 @@ class Dog < ApplicationRecord
 # ORDER BY s.id;
 
   def self.available
-    select('d.id AS dog_id, d.name, d.price, d.description, d.breed, s.id AS seller_id, s.name, s.email')
+		select('d.id AS dog_id, d.name AS dog_name, d.price, d.description, d.breed, s.id AS seller_id, s.name, s.email')
     .from('dogs AS d')
-    .joins('sellers AS s ON s.id = d.seller_id')
+    .joins('INNER JOIN sellers AS s ON s.id = d.seller_id')
     .order('s.id')
   end
 end

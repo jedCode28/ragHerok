@@ -1,4 +1,3 @@
-
 import React, { useContext } from "react";
 import { Menu } from "semantic-ui-react";
 import { Link, useHistory, useLocation } from "react-router-dom";
@@ -40,11 +39,18 @@ const Navbar1 = (props) => {
         <Link to="/">
           <Menu.Item name="home" id="home" active={pathname === "/"} />
         </Link>
+        <Link to="/dogs">
+          <Menu.Item name="dogs" id="dog" active={pathname === "/dogs"} />
+        </Link>
         <Link to="/about">
           <Menu.Item name="about" id="about" active={pathname === "/about"} />
         </Link>
         <Link to="/componentDemo">
-          <Menu.Item name="componentDemo" id="componentDemo" active={pathname === "/componentDemo"} />
+          <Menu.Item
+            name="componentDemo"
+            id="componentDemo"
+            active={pathname === "/componentDemo"}
+          />
         </Link>
         {rightNavItems()}
       </Menu>
