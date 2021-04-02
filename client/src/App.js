@@ -11,6 +11,8 @@ import Login from "./components/Login";
 import FetchUser from "./components/FetcherUser";
 import ProtectedRoute from "./components/ProtectedRoutes";
 import Dogs from "./pages/Dogs";
+import Breeds from "./pages/Breeds";
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
             <ProtectedRoute exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
             <Route exact path="/dogs" component={Dogs} />
+            <Route exact path="/breeds" component={Breeds} />
             <Route exact path="/componentDemo" component={ComponentDemo} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
