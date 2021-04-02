@@ -37,11 +37,11 @@ const Dogs = () => {
         console.log('dup')
       }else{
         uniqueArray.push(item.name)
-        uniqueSellerArray.push({name:  item.name, email: item.email, id: item.id})
+        uniqueSellerArray.push({name:  item.name, email: item.email, id: item.seller_id})
       }
     })
 
-    console.log(uniqueArray)
+    console.log(uniqueSellerArray)
     return uniqueSellerArray
     
   }
@@ -85,6 +85,9 @@ const Dogs = () => {
 
             </Accordion.Title>
             <Accordion.Content active={activeIndex === i}>
+              <h4>Seller Info</h4>
+              <p>email: {seller.email}</p>
+              <p>id: {seller.id}</p>
               <Card.Group>
               {renderDogs((dogs.filter(dog => dog.name == seller.name)))}
               </Card.Group>
