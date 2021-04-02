@@ -11,17 +11,18 @@ const Dogs = (props) => {
   }, []);
 
   const normalizeDogs = (data) => {
-    let allIDS = data.map((d) => d);
+    let allIDS = data.map(d => d);
     const sellerSet = new Set(allIDS);
     const sellerIDS = [...sellerSet];
-    console.log(sellerSet);
+    // console.log(sellerSet);
 
-    let normalizedDogs = sellerIDS.map((id) => {
-      let dogs = data.filter((d) => d.seller_id === id);
-      let name = `${dogs[0].name}`;
-      let email = dogs[0].email;
+    let normalizedDogs = sellerIDS.map(id => {
+      let dogsArr = data.filter(d => d.seller_id === id);
+      console.log(dogsArr)
+      let name = `${dogsArr[0].name}`;
+      let email = dogsArr[0].email;
 
-      let sellerDogs = dogs.map((x) => {
+      let sellerDogs = dogs.map(x => {
         return {
           name: x.name,
           price: x.price,
