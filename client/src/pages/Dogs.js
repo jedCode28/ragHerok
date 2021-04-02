@@ -25,7 +25,7 @@ const Dogs = () => {
       alert("error");
       console.log(error);
     }
-    console.log(dogs)
+    // console.log(dogs)
   };
 
 
@@ -49,6 +49,7 @@ const Dogs = () => {
           <Card.Content>
             <Card.Header>{dog.dog_name}</Card.Header>
             <Card.Meta>Price: {dog.price} </Card.Meta>
+            <Card.Meta>Price: {dog.email} </Card.Meta>
             <Card.Description>{dog.description}</Card.Description>
           </Card.Content>
         </Card>
@@ -59,6 +60,8 @@ const Dogs = () => {
 
   const renderSellers = (dogs) => {
     let sellers = uniqueData(dogs)
+    console.log('------------')
+    console.log(uniqueData)
     return(
       sellers.map((seller, i) => {
         return(
