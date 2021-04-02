@@ -31,13 +31,18 @@ const Dogs = () => {
 
   const uniqueData = (array) => {
     let uniqueArray = []
+    let uniqueSellerArray = []
     array.forEach((item) => {
-      uniqueArray.includes(item.name)?
-      console.log('dup'):
-      uniqueArray.push(item.name)
+      if (uniqueArray.includes(item.name)){
+        console.log('dup')
+      }else{
+        uniqueArray.push(item.name)
+        uniqueSellerArray.push({name:  item.name, email: item.email, id: item.id})
+      }
     })
+
     console.log(uniqueArray)
-    return uniqueArray
+    return uniqueSellerArray
     
   }
 
@@ -74,14 +79,14 @@ const Dogs = () => {
 
             <div>
                 <Label>
-                  {seller}
+                  {seller.name}
                 </Label>
               </div>
 
             </Accordion.Title>
             <Accordion.Content active={activeIndex === i}>
               <Card.Group>
-              {renderDogs((dogs.filter(dog => dog.name == seller)))}
+              {renderDogs((dogs.filter(dog => dog.name == seller.name)))}
               </Card.Group>
             </Accordion.Content>
           </Accordion>
