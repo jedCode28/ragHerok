@@ -1,6 +1,6 @@
 import React, {useState, useEffect } from 'react'
 import axios from 'axios'
-import { List, Header, Table, Card, CardHeader, Accordion, Label } from 'semantic-ui-react';
+import { List, Header, Table, Card, CardHeader, Accordion, Label, Image} from 'semantic-ui-react';
 
 const Dogs = () => {
   const [dogs, setDogs] = useState([])
@@ -51,9 +51,10 @@ const Dogs = () => {
     dogs.map((dog) => {
       return(
         <Card>
+          <Image src={dog.image} />
           <Card.Content>
             <Card.Header>{dog.dog_name}</Card.Header>
-            <Card.Meta>Price: {dog.price} </Card.Meta>
+            <Card.Meta>Price: ${dog.price} </Card.Meta>
             <Card.Description>{dog.description}</Card.Description>
           </Card.Content>
         </Card>

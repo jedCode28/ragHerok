@@ -17,11 +17,14 @@ require "faker"
 
 
   10.times do 
+    dogBreed = Faker::Creature::Dog.breed
+    dogName = Faker::Creature::Dog.name
     Dog.create(
-      name: Faker::Creature::Dog.name,
+      name: dogName,
       price: Faker::Commerce.price,
       description: Faker::Creature::Dog.meme_phrase,
-      breed: Faker::Creature::Dog.breed,
+      breed: dogBreed,
+      image: Faker::LoremFlickr.image(size: "224x224", search_terms: [Faker::Verb.base, 'dog']),
       seller_id: seller.id
       )
   end
