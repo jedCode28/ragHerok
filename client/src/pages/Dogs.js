@@ -75,7 +75,8 @@ const Dogs = () => {
             index={i}
             onClick={handleClick}
             >
-
+              
+            {/* Dog drop down is styled in App.css */}
             <div className='dogDropdown'>
                 <div style={{gridColumn: '1'}}>
                   {seller.name}

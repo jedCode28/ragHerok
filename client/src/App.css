@@ -39,11 +39,15 @@
 
 .dogDropdown {
   display: grid;
-  grid-template-columns: 100px;
-  /* grid-template-columns: auto; */
-  /* flex-direction: row; */
+  gap: 10px;
+  justify-items: center;
+
+  width: fit-content;
+
   padding: 1%;
   border: 2px solid;
   border-radius: 3px;
   border-color: grey;
+
+
 }
