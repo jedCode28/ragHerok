@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from 'react'
 import axios from 'axios'
-import { List, Header, Table, Card, CardHeader, Accordion, Label } from 'semantic-ui-react';
+import CardContainer from '../components/CardContainer'
+import { List, Header, Table, Card, CardHeader, Accordion, Label, Image, Feed, Grid} from 'semantic-ui-react';
 
 const Dogs = () => {
   const [dogs, setDogs] = useState([])
@@ -37,7 +38,7 @@ const Dogs = () => {
         console.log('dup')
       }else{
         uniqueArray.push(item.name)
-        uniqueSellerArray.push({name:  item.name, email: item.email, id: item.seller_id})
+        uniqueSellerArray.push({name:  item.name, email: item.email, id: item.seller_id, avatar: item.seller_avatar})
       }
     })
 
@@ -51,10 +52,10 @@ const Dogs = () => {
     dogs.map((dog) => {
       return(
         <Card>
+          <Image src={dog.image} />
           <Card.Content>
             <Card.Header>{dog.dog_name}</Card.Header>
-            <Card.Meta>Price: {dog.price} </Card.Meta>
-            <Card.Meta>Price: {dog.email} </Card.Meta>
+            <Card.Meta>Price: ${dog.price} </Card.Meta>
             <Card.Description>{dog.description}</Card.Description>
           </Card.Content>
         </Card>
@@ -76,12 +77,17 @@ const Dogs = () => {
             index={i}
             onClick={handleClick}
             >
-
-            <div>
-                <Label>
+              
+            {/* Dog drop down is styled in App.css */}
+            <div className='dogDropdown'>
+                <div style={{gridColumn: '1'}}>
                   {seller.name}
-                </Label>
-              </div>
+                </div>
+                <div style={{gridColumn: '2'}}>
+                  {seller.email}
+                </div>
+              
+            </div>
 
             </Accordion.Title>
             <Accordion.Content active={activeIndex === i}>

@@ -10,18 +10,23 @@ require "faker"
 
 
 5.times do 
+  sellerName = Faker::Name.name
   seller = Seller.create(
-    name: Faker::Name.name,        
-    email: Faker::Internet.email
+    name: sellerName,        
+    email: Faker::Internet.email,
+    avatar: Faker::Avatar.image(slug: sellerName, size: "50x50", format: "jpg")
   )
 
 
   10.times do 
+    dogBreed = Faker::Creature::Dog.breed
+    dogName = Faker::Creature::Dog.name
     Dog.create(
-      name: Faker::Creature::Dog.name,
+      name: dogName,
       price: Faker::Commerce.price,
       description: Faker::Creature::Dog.meme_phrase,
-      breed: Faker::Creature::Dog.breed,
+      breed: dogBreed,
+      image: Faker::LoremFlickr.image(size: "224x224", search_terms: [Faker::Verb.base, 'dog']),
       seller_id: seller.id
       )
   end

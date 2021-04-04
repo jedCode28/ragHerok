@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_01_205344) do
+ActiveRecord::Schema.define(version: 2021_04_03_232542) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2021_04_01_205344) do
     t.bigint "seller_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "image"
     t.index ["seller_id"], name: "index_dogs_on_seller_id"
   end
 
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 2021_04_01_205344) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "avatar"
   end
 
   create_table "users", force: :cascade do |t|

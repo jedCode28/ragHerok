@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.dogDropdown {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+
+  width: fit-content;
+
+  padding: 1%;
+  border: 2px solid;
+  border-radius: 3px;
+  border-color: grey;
+
+
+}
