@@ -10,9 +10,11 @@ require "faker"
 
 
 5.times do 
+  sellerName = Faker::Name.name
   seller = Seller.create(
-    name: Faker::Name.name,        
-    email: Faker::Internet.email
+    name: sellerName,        
+    email: Faker::Internet.email,
+    avatar: Faker::Avatar.image(slug: sellerName, size: "50x50", format: "jpg")
   )
 
 

@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from 'react'
 import axios from 'axios'
-import { List, Header, Table, Card, CardHeader, Accordion, Label, Image} from 'semantic-ui-react';
+import CardContainer from '../components/CardContainer'
+import { List, Header, Table, Card, CardHeader, Accordion, Label, Image, Feed, Grid} from 'semantic-ui-react';
 
 const Dogs = () => {
   const [dogs, setDogs] = useState([])
@@ -37,7 +38,7 @@ const Dogs = () => {
         console.log('dup')
       }else{
         uniqueArray.push(item.name)
-        uniqueSellerArray.push({name:  item.name, email: item.email, id: item.seller_id})
+        uniqueSellerArray.push({name:  item.name, email: item.email, id: item.seller_id, avatar: item.seller_avatar})
       }
     })
 
@@ -75,11 +76,15 @@ const Dogs = () => {
             onClick={handleClick}
             >
 
-            <div>
-                <Label>
+            <div className='dogDropdown'>
+                <div style={{gridColumn: '1'}}>
                   {seller.name}
-                </Label>
-              </div>
+                </div>
+                <div style={{gridColumn: '2'}}>
+                  {seller.email}
+                </div>
+              
+            </div>
 
             </Accordion.Title>
             <Accordion.Content active={activeIndex === i}>
