@@ -48,13 +48,13 @@ const Navbar1 = (props) => {
         <Link to="/about">
           <Menu.Item name="about" id="about" active={pathname === "/about"} />
         </Link>
-        <Link to="/componentDemo">
+        {/* <Link to="/componentDemo">
           <Menu.Item
             name="componentDemo"
             id="componentDemo"
             active={pathname === "/componentDemo"}
           />
-        </Link>
+        </Link> */}
         {rightNavItems()}
       </Menu>
     </div>

@@ -48,7 +48,7 @@ const Breeds = () => {
     
     return(
     dogs.map((dog) => {
-        console.log(dog.image)
+        // console.log(dog.image)
       return(
         <Card>
           <Image src={dog.image} />
