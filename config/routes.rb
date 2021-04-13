@@ -5,4 +5,5 @@ Rails.application.routes.draw do
     get '/api_test', to:'static#api_test'
 		get '/dogs', to: 'dogs#index'
   end
+  get '*other', to: 'static#index'
 end
